@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Malla Curricular Medicina - Alexa</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f4fc;
+      padding: 40px;
+      color: #333;
+    }
+    h1 {
+      text-align: center;
+      color: #4a148c;
+    }
+    .curso {
+      margin: 10px 0;
+      padding: 10px;
+      background-color: #fff;
+      border-left: 5px solid #4a148c;
+      cursor: pointer;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: fit-content;
+    }
+    .desbloqueos {
+      margin-left: 20px;
+      display: none;
+      background: #eaeaff;
+      padding: 10px;
+      border-left: 3px solid #7e57c2;
+    }
+    .electivo {
+      margin: 10px 0;
+      background-color: #fff8e1;
+      border-left: 5px solid #ffb300;
+      padding: 10px;
+      width: fit-content;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Malla Curricular Interactiva - Medicina 🩺</h1>
+
+<div class="curso" onclick="toggle('bioquimica')">Química ➡ Bioquímica</div>
+<div id="bioquimica" class="desbloqueos">Bioquímica</div>
+
+<div class="curso" onclick="toggle('saludPublica')">Epidemiología ➡ Salud Pública</div>
+<div id="saludPublica" class="desbloqueos">Salud Pública</div>
+
+<div class="curso" onclick="toggle('bioestadistica')">Estadística ➡ Bioestadística, Metodología, Medicina basada en evidencia</div>
+<div id="bioestadistica" class="desbloqueos">Bioestadística, Metodología de la Investigación, Medicina Basada en la Evidencia</div>
+
+<div class="curso" onclick="toggle('morfo2')">Morfofisiología I ➡ Morfo II, Fisiopato I y II, Anatomía Patológica</div>
+<div id="morfo2" class="desbloqueos">Morfofisiología II, Fisiopatología I y II, Anatomía Patológica</div>
+
+<div class="curso" onclick="toggle('semiologia')">Fisiopato I ➡ Semiología</div>
+<div id="semiologia" class="desbloqueos">Semiología</div>
+
+<div class="curso" onclick="toggle('simulacion')">Farmacología ➡ Nutrición, Medicina Interna III, Cirugía, Simulación Quirúrgica, Pediatría</div>
+<div id="simulacion" class="desbloqueos">Nutrición y Prácticas Saludables, Medicina Interna III, Cirugía, Simulación Quirúrgica, Pediatría</div>
+
+<h2>📚 Electivos (Requieren estos cursos previos)</h2>
+
+<div class="electivo">Uso Correcto de Antibióticos ➡ Requiere Farmacología e Infectología</div>
+<div class="electivo">Razonamiento Anatómico ➡ Requiere Morfofisiología III</div>
+<div class="electivo">Primeros Auxilios ➡ Requiere Anatomía General</div>
+<div class="electivo">Neurociencia ➡ Requiere Morfofisiología I y Redacción General</div>
+<div class="electivo">Medicina Ocupacional ➡ Requiere Fundamentos de Medicina Intercultural</div>
+<div class="electivo">Medicina Interna Interprofesional ➡ Requiere Medicina Interna I</div>
+
+<script>
+  function toggle(id) {
+    var el = document.getElementById(id);
+    el.style.display = el.style.display === 'block' ? 'none' : 'block';
+  }
+</script>
+
+</body>
+</html>
